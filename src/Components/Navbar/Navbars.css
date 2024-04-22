@@ -1,0 +1,16 @@
+.navbar{
+    background-color:rgb(234, 218, 199);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+.item{
+    margin-right: 20px;
+}

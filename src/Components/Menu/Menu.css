@@ -1,0 +1,38 @@
+.card{
+    height: 350px;
+    width: 250px;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+.card_image img{
+    height: 200px;
+    width: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.rating{
+    
+}
+.details,.card_btm{
+    padding: 10px;
+}
+
+.card_btm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_btm p{
+    font-weight: 800;
+}
+.card_btm button{
+    border-radius: 30px;
+    border-color: burlywood;
+    padding: 7px 10px;
+    cursor: pointer;
+}
