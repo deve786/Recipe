@@ -53,18 +53,24 @@ function Food() {
                                 </div>
                                 <hr />
                                 <div className='prep'>
-                                <p>Preparation Time</p>
-                                    <div className='roundbox'>
-                                        
-                                        <p>{food.prepTimeMinutes}</p>
+                                    <div>
+                                        <p>Preparation Time</p>
+                                            <div className='roundbox'>
+                                                
+                                                <p>{food.prepTimeMinutes}</p>
+                                            </div>
                                     </div>
-                                    <p>Cooking Time</p>
-                                    <div className='roundbox'>
-                                        <p>{food.cookTimeMinutes}</p>
+                                    <div>
+                                        <p>Cooking Time</p>
+                                        <div className='roundbox'>
+                                            <p>{food.cookTimeMinutes}</p>
+                                        </div>
                                     </div>
-                                    <p>Calories Serving</p>
-                                    <div className='roundbox'>
-                                        <p>{food.caloriesPerServing}</p>
+                                    <div>
+                                        <p>Calories Serving</p>
+                                        <div className='roundbox'>
+                                            <p>{food.caloriesPerServing}</p>
+                                        </div>
                                     </div>
                                 </div>
                                 
