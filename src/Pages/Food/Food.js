@@ -45,20 +45,59 @@ function Food() {
                                         :
                                         <></>
                                 }</p>
-                                <hr />
+
                                 <div className='box-main'>
                                     <div className='box'>{food.difficulty}</div>
                                     <div className='box'>{food.cuisine}</div>
                                     <div className='box'>{food.mealType[0]}</div>
                                 </div>
-                                <div className='prep'>
-                                    <tr><td>Preperation Time</td> <td className='time'>25</td></tr>
-                                    <tr><td>Cooking Time</td> <td className='time'>25</td></tr>
-                                    <tr><td>Calories per Serving</td> <td className='time'>25</td></tr>
-
-
+                                <hr />
+                                {/* <div className='prep'>
+                                    <div className='roundbox'>
+                                        <p>{food.prepTimeMinutes}</p>
+                                    </div>
+                                    <div className='roundbox'>
+                                        <p>{food.cookTimeMinutes}</p>
+                                    </div>
+                                    <div className='roundbox'>
+                                        <p>{food.caloriesPerServing}</p>
+                                    </div>
                                 </div>
+                                <div className='prep1'>
 
+                                    <div >
+                                        <p>Preparation Time</p>
+                                    </div>
+
+
+                                    <div >
+                                        <p>Cooking Time</p>
+                                    </div>
+                                    <div >
+                                        <p>Calories Serving</p>
+                                    </div>
+
+
+
+                                </div> */}
+
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td>Prepartin Time</td>
+                                            <td>sd</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cooking Time</td>
+                                            <td>ss</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Calories Serving</td>
+                                            <td>cs</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <hr />
                                 <Accordion title="Ingredients">{
                                     food.ingredients ?
                                         <ol itemType='1'>
@@ -81,11 +120,7 @@ function Food() {
                                         <></>
                                 }
                                 </Accordion>
-                                {/* <div>
-                                    <div className='roundbox'>
-                                        <p>52</p>
-                                    </div>
-                                </div> */}
+
                             </div>
                         </div>
                         <div className='reviews'>
@@ -93,7 +128,7 @@ function Food() {
                         </div>
                     </div>
                     :
-                    <div><img src='/loading.gif' /></div>
+                    <div></div>
 
             }
 

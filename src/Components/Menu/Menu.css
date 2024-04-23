@@ -1,4 +1,14 @@
-.row{
+.menu_main{
+    margin-top: 20px;
+}
+.hr{
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+.menu_hr{
+    width:30%;
     
 }
 .card{
@@ -16,6 +26,9 @@
     width: 250px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+.menu-heading{
+    color:  rgb(200, 178, 151);;
 }
 .rating{
     
@@ -56,4 +69,7 @@
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    background-color: rgb(234, 218, 199);
+    outline: none;
+
 }
