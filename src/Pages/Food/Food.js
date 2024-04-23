@@ -14,7 +14,7 @@ function Food() {
         const result = await axios.get(`https://dummyjson.com/recipes/${params.id}`)
         setFood(result.data);
     }
-    
+
     useEffect(() => {
         singleData()
     }, [])
@@ -29,9 +29,12 @@ function Food() {
                                 <img src={food.image} alt="" />
                             </div>
                             <div className='food-detail'>
-                                <h2>{food.name}</h2>
-                                <p>{food.rating} ⭐⭐⭐⭐⭐ </p>
-                                <p >{
+                                <h1>{food.name}</h1>
+                                <p className='rating'>Rating: {food.rating}  ({food.reviewCount})</p>
+
+
+
+                                <p className='tag'>{
                                     food.tags ?
                                         <p>
                                             {food.tags.map(i => (
@@ -42,6 +45,20 @@ function Food() {
                                         :
                                         <></>
                                 }</p>
+                                <hr />
+                                <div className='box-main'>
+                                    <div className='box'>{food.difficulty}</div>
+                                    <div className='box'>{food.cuisine}</div>
+                                    <div className='box'>{food.mealType[0]}</div>
+                                </div>
+                                <div className='prep'>
+                                    <tr><td>Preperation Time</td> <td className='time'>25</td></tr>
+                                    <tr><td>Cooking Time</td> <td className='time'>25</td></tr>
+                                    <tr><td>Calories per Serving</td> <td className='time'>25</td></tr>
+
+
+                                </div>
+
                                 <Accordion title="Ingredients">{
                                     food.ingredients ?
                                         <ol itemType='1'>
@@ -64,7 +81,11 @@ function Food() {
                                         <></>
                                 }
                                 </Accordion>
-
+                                {/* <div>
+                                    <div className='roundbox'>
+                                        <p>52</p>
+                                    </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='reviews'>
@@ -72,7 +93,7 @@ function Food() {
                         </div>
                     </div>
                     :
-                    <p>Loading....</p>
+                    <div><img src='/loading.gif' /></div>
 
             }
 

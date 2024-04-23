@@ -14,3 +14,17 @@
 .item{
     margin-right: 20px;
 }
+
+@media (max-width:450px) {
+    .menu,.menu-prof{
+        display: none;
+    }
+    .navbar{
+        justify-content: flex-start;
+        
+        display: flex;
+    }
+    .logo{
+        margin-left: 40px;
+    }
+}

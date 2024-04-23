@@ -1,20 +1,38 @@
 .banner{
-    height: 500px;
+    padding: 20px;
     background-color:rgb(234, 218, 199);    display: flex;
     justify-content: space-around;
     justify-items: center;
     align-items: center;
 }
 .content{
-    width: 50%;
+    width: 40%;
     margin-left: 10%;
 }
 .image{
-    width: 50%;
+    width: 60%;
    
     
 }
 .image img{
     height: 100%;
-    width: 60%;
+    width: 70%;
+}
+.content h1{
+    font-size : clamp(1rem, 9vw, 3rem);
+}
+
+@media (max-width:550px) {
+    .banner{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .content{
+        margin-left: 0;
+        width: 90%;
+    }
+    .image{
+        margin-left: 40px;
+    }
 }
