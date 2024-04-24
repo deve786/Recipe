@@ -6,6 +6,7 @@ function Menu() {
 
   const [food, setFood] = useState([])
   const [filteredFood, setFilteredFood] = useState([]);
+  const [sdata, setSdata] = useState('')
   const fetchFood = async () => {
     const data = await axios.get('https://dummyjson.com/recipes')
     setFood(data.data.recipes)
@@ -16,25 +17,38 @@ function Menu() {
 
   useEffect(() => {
     fetchFood()
-  }, [])
+  }, [sdata])
 
   const filterFood = (mealType) => {
     const filtered = food.filter(item => item.mealType.includes(mealType));
     setFilteredFood(filtered);
 
   };
-  console.log(filteredFood);
+
+  const search=()=>{
+    const data=food.filter(i=>(i.name).toLowerCase().trim().includes(sdata.toLowerCase().trim()))
+    setFilteredFood(data);
+    console.log(data);
+  }
+
+  
   return (
     <div className='menu_main'>
       <h2 className='menu-head'>Our <span className='menu-heading'>Menus</span></h2>
       <div className='hr'><hr className='menu_hr' /></div>
       <div className='category'>
-        <button onClick={() => fetchFood()}>All</button>
-        <button onClick={() => filterFood('Breakfast')}>Breakfast</button>
-        <button onClick={() => filterFood('Lunch')}>Lunch</button>
-        <button onClick={() => filterFood('Dinner')}>Dinner</button>
-
+        <div className='filter_btns'>
+          <button onClick={() => fetchFood()}>All</button>
+          <button onClick={() => filterFood('Breakfast')}>Breakfast</button>
+          <button onClick={() => filterFood('Lunch')}>Lunch</button>
+          <button onClick={() => filterFood('Dinner')}>Dinner</button>
+        </div>
+        <div className='search'>
+          <input type='text' onChange={(e)=>setSdata(e.target.value)}/>
+          <button onClick={search}>Search</button>
+        </div>
       </div>
+      
       <div>
 
       </div>
