@@ -7,8 +7,8 @@ function Banner() {
 
             <div className='banner'>
                 <div className='content'>
-                    <h1>Natural food Your Healthy Life</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro impedit eaque tempore dolor obcaecati ab aspernatur soluta quod, neque consequuntur tenetur eos eligendi, optio fuga corporis consequatur repellendus sint laudantium.</p>
+                    <h1>Discover the Joy of Cooking with Chefchirp</h1>
+                    <p>Unlock the secrets of exquisite dishes from around the world. Each recipe offers step-by-step instructions to ensure you can create delicious meals every time. Dive into a world of flavors and transform your kitchen into a chef's paradise!</p>
                 </div>
                 <div className='image '>
                     <img src="/banner_img.png" alt="" />
