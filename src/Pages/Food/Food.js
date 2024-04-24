@@ -106,7 +106,7 @@ function Food() {
                         </div> */}
                     </div>
                     :
-                    <div></div>
+                    <div className='load'><img src="/loading.gif" alt="" srcset="" /></div>
 
             }
 

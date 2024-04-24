@@ -20,7 +20,9 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
 .card_image img{
     height: 200px;
     width: 250px;
@@ -73,6 +75,13 @@
     background-color: rgb(234, 218, 199);
     outline: none;
     border: none;
+
+    
+}
+.category button:hover{
+    
+    background-color: rgb(234, 209, 176);
+    
 
     
 }

@@ -25,13 +25,14 @@ function Menu() {
 
   };
 
-  const search=()=>{
-    const data=food.filter(i=>(i.name).toLowerCase().trim().includes(sdata.toLowerCase().trim()))
+  const search = () => {
+    const data = food.filter(i => (i.name).toLowerCase().trim().includes(sdata.toLowerCase().trim()))
     setFilteredFood(data);
     console.log(data);
   }
 
-  
+  console.log(filteredFood);
+
   return (
     <div className='menu_main'>
       <h2 className='menu-head'>Our <span className='menu-heading'>Menus</span></h2>
@@ -44,47 +45,46 @@ function Menu() {
           <button onClick={() => filterFood('Dinner')}>Dinner</button>
         </div>
         <div className='search'>
-          <input type='text' onChange={(e)=>setSdata(e.target.value)}/>
+          <input type='text' onChange={(e) => setSdata(e.target.value)} />
           <button onClick={search}>Search</button>
         </div>
       </div>
-      
+
       <div>
 
       </div>
 
-
-
+   
 
 
       {
+        
+          <div className='row'>
+            {
+              filteredFood.map(i => (
+                <div>
+                  <Link to={`food/${i.id}`} style={{ textDecoration: "none", color: 'black' }}>
+                    <div className='card'>
+                      <div className='card_image'>
+                        <img src={i.image} alt="" />
+                      </div>
 
-        <div className='row'>
-          {
-            filteredFood.map(i => (
-              <div>
-                <Link to={`food/${i.id}`} style={{ textDecoration: "none", color: 'black' }}>
-                  <div className='card'>
-                    <div className='card_image'>
-                      <img src={i.image} alt="" />
+                      <div className='details'>
+                        <h3>{i.name}</h3>
+                        <h5>⭐⭐⭐⭐⭐</h5>
+
+                      </div>
+                      <div className='card_btm'>
+                        <p>{i.cuisine}</p>
+                        <p>{i.mealType.join(", ")}</p>
+                      </div>
                     </div>
-
-                    <div className='details'>
-                      <h3>{i.name}</h3>
-                      <h5>⭐⭐⭐⭐⭐</h5>
-
-                    </div>
-                    <div className='card_btm'>
-                      <p>{i.cuisine}</p>
-                      <p>{i.mealType.join(", ")}</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))
-          }
-        </div>
-
+                  </Link>
+                </div>
+              ))
+            }
+          </div>
+          
       }
 
     </div>
