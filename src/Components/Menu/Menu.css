@@ -72,6 +72,7 @@
     cursor: pointer;
     background-color: rgb(234, 218, 199);
     outline: none;
+    border: none;
 
     
 }
