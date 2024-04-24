@@ -167,11 +167,16 @@ td .time{
   @media (max-width:600px) {
     .food-image {
       width: 100%;
+      margin-top: 20px;
      
   }
   .food-detail {
       width: 100%;
+      margin-top: 20px;
   }
-
+  .prep{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
    
 }
